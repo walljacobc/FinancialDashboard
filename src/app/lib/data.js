@@ -4,7 +4,7 @@ import { formatCurrency } from './utils';
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
-
+  //noStore();
   try {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
@@ -14,7 +14,7 @@ export async function fetchRevenue() {
 
     const data = await sql`SELECT * FROM revenue`;
 
-    // console.log('Data fetch completed after 3 seconds.');
+     console.log('Data fetch completed after 3 seconds.');
 
     return data.rows;
   } catch (error) {
